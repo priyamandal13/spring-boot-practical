@@ -84,7 +84,7 @@ public class UserCtl extends BaseCtl {
 		ORSResponse res = new ORSResponse();
 
 		UserDTO dto = userService.findById(id);
-
+ 
 		res.addData(dto);
 
 		return res;
@@ -112,7 +112,7 @@ public class UserCtl extends BaseCtl {
 		UserDTO dto = (UserDTO) form.getDto();
 
 		List list = userService.search(dto, pageNo, 5);
-
+  
 		if (list.size() == 0) {
 			res.addMessage("Result not found...!!!");
 		} else {
